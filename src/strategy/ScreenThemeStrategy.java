@@ -1,17 +1,16 @@
-package strategy.themeStrategy;
+package strategy;
 
 public abstract class ScreenThemeStrategy {
     private String backgroundColor;
     private String textColor;
     private String textFont;
 
-    public void execute() {
-        System.out.println("*".repeat(50));
-        System.out.println("Theme executed with the Style: "+getClass().getName());
-        System.out.println("Settings: " +
-                "\nbackgroundColor:"+this.backgroundColor+
-                "\ntextColor:"+this.textColor+
-                "\ntextFont:"+this.textFont);
+    public void getThemeDetails() {
+        System.out.println("Theme details with the Style: "+getClass().getName()+" and settings:");
+        System.out.println(
+                "- backgroundColor:"+this.backgroundColor+
+                "\n- textColor:"+this.textColor+
+                "\n- textFont:"+this.textFont);
     }
 
     public void setBackgroundColor(String backgroundColor) {

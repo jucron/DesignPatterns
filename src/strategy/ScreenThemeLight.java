@@ -1,4 +1,4 @@
-package strategy.themeStrategy;
+package strategy;
 
 public class ScreenThemeLight extends ScreenThemeStrategy {
     //

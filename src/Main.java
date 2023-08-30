@@ -1,17 +1,19 @@
-import strategy.Screen;
-import strategy.themeStrategy.ScreenThemeDark;
-import strategy.themeStrategy.ScreenThemeKids;
+import strategy.ScreenThemeKids;
 
 public class Main {
     public static void main(String[] args) {
         //
-        Screen screen = new Screen(new ScreenThemeDark());
+        ScreenBuilder screenBuilder = new ScreenBuilder();
+        Screen screen = screenBuilder.
+                withDarkTheme().
+                withLightTheme().
+                withButtons().
+                withHeadline().
+                build();
+
         //
-        screen.getScreenTheme().execute();
+        screen.getDetailsOfScreen();
         //
-        screen.setScreenTheme(new ScreenThemeKids());
-        //
-        screen.getScreenTheme().execute();
-        //
+
     }
 }
