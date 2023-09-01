@@ -1,3 +1,6 @@
+import initialScreen.HomePageStrategy;
+import initialScreen.HomePageType;
+import initialScreen.HomePageUser;
 import layout.ScreenLayoutType;
 
 public class ScreenFactory {
@@ -5,17 +8,23 @@ public class ScreenFactory {
 
     public ScreenFactory() {
     }
-    public Screen createScreenDarkTheme(ScreenLayoutType layoutType) {
-        ScreenBuilder builderWithTheme = screenBuilder.withDarkTheme();
+    public Screen createScreenDarkTheme(ScreenLayoutType layoutType, HomePageType homePageType) {
+        ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withDarkTheme();
         return this.createScreen(layoutType,builderWithTheme);
     }
-    public Screen createScreenLightTheme(ScreenLayoutType layoutType) {
-        ScreenBuilder builderWithTheme = screenBuilder.withLightTheme();
+    public Screen createScreenLightTheme(ScreenLayoutType layoutType, HomePageType homePageType) {
+        ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withLightTheme();
         return this.createScreen(layoutType,builderWithTheme);
     }
-    public Screen createScreenKidsTheme(ScreenLayoutType layoutType) {
-        ScreenBuilder builderWithTheme = screenBuilder.withKidsTheme();
+    public Screen createScreenKidsTheme(ScreenLayoutType layoutType, HomePageType homePageType) {
+        ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withKidsTheme();
         return this.createScreen(layoutType,builderWithTheme);
+    }
+    private ScreenBuilder createHomePage(HomePageType homePageType) {
+        if (homePageType == HomePageType.HOME_PAGE_ADMIN) {
+            return screenBuilder.withHomePageAdmin();
+        }
+        return screenBuilder.withHomePageUser();
     }
     private Screen createScreen(ScreenLayoutType layoutType, ScreenBuilder builderWithTheme) {
         switch (layoutType) {

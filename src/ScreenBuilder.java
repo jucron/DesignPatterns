@@ -1,3 +1,6 @@
+import initialScreen.HomePageAdmin;
+import initialScreen.HomePageStrategy;
+import initialScreen.HomePageUser;
 import layout.ScreenLayout;
 import theme.ScreenThemeDark;
 import theme.ScreenThemeKids;
@@ -8,8 +11,17 @@ public class ScreenBuilder {
     private Screen screen;
     private ScreenLayout screenLayout = new ScreenLayout();
     private ScreenThemeStrategy screenTheme;
+    private HomePageStrategy homePage;
 
     public ScreenBuilder() {
+    }
+    public ScreenBuilder withHomePageAdmin() {
+        this.homePage = new HomePageAdmin();
+        return this;
+    }
+    public ScreenBuilder withHomePageUser() {
+        this.homePage = new HomePageUser();
+        return this;
     }
     public ScreenBuilder withDarkTheme() {
         this.screenTheme = new ScreenThemeDark();
@@ -44,6 +56,6 @@ public class ScreenBuilder {
         return this;
     }
     public Screen build() {
-        return new Screen(this.screenTheme,this.screenLayout);
+        return new Screen(this.screenTheme,this.screenLayout, this.homePage);
     }
 }
