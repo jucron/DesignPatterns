@@ -35,12 +35,14 @@ public class ScreenFactory {
 
     private Screen createLayoutTypeA(ScreenBuilder screenBuilder) {
         return this.screenBuilder.
+                withMenu().
                 withButtons().
                 withHeadline().
                 build();
     }
     private Screen createLayoutTypeB(ScreenBuilder screenBuilder) {
         return this.screenBuilder.
+                withMenu().
                 withButtons().
                 withHeadline().
                 withImages().
@@ -48,6 +50,7 @@ public class ScreenFactory {
     }
     private Screen createLayoutTypeC(ScreenBuilder screenBuilder) {
         return this.screenBuilder.
+                withMenu().
                 withButtons().
                 withHeadline().
                 withImages().

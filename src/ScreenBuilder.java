@@ -28,19 +28,19 @@ public class ScreenBuilder {
         return this;
     }
     public ScreenBuilder withImages() {
-        this.screenLayout.setHeadline(true);
+        this.screenLayout.setImages(true);
         return this;
     }
     public ScreenBuilder withButtons() {
-        this.screenLayout.setHeadline(true);
+        this.screenLayout.setButtons(true);
         return this;
     }
     public ScreenBuilder withMenu() {
-        this.screenLayout.setHeadline(true);
+        this.screenLayout.setMenu(true);
         return this;
     }
     public ScreenBuilder withNavbar() {
-        this.screenLayout.setHeadline(true);
+        this.screenLayout.setNavbar(true);
         return this;
     }
     public Screen build() {
