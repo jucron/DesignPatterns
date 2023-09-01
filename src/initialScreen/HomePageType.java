@@ -1,6 +1,6 @@
 package initialScreen;
 
 public enum HomePageType {
-    HOME_PAGE_ADMIN,
-    HOME_PAGE_USER
+    ADMIN_NOT_REQUIRED,
+    ADMIN_REQUIRED
 }

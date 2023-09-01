@@ -22,7 +22,7 @@ public class Screen {
 
     private void printDetailsOfScreen() {
         System.out.println("*".repeat(50));
-        System.out.println("Details of Screen called with Admin privileges:");
+        System.out.println("Details of Screen called:");
         this.screenTheme.getThemeDetails();
         this.screenLayout.getLayoutDetails();
     }

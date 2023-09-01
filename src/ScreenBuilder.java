@@ -8,7 +8,6 @@ import theme.ScreenThemeLight;
 import theme.ScreenThemeStrategy;
 
 public class ScreenBuilder {
-    private Screen screen;
     private ScreenLayout screenLayout = new ScreenLayout();
     private ScreenThemeStrategy screenTheme;
     private HomePageStrategy homePage;
