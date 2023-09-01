@@ -1,4 +1,4 @@
-package strategy;
+package theme;
 
 public abstract class ScreenThemeStrategy {
     private String backgroundColor;
@@ -12,6 +12,7 @@ public abstract class ScreenThemeStrategy {
                 "\n- textColor:"+this.textColor+
                 "\n- textFont:"+this.textFont);
     }
+    public abstract void clickShowAnimationButton();
 
     public void setBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;

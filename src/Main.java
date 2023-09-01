@@ -1,19 +1,13 @@
-import strategy.ScreenThemeKids;
+import layout.ScreenLayoutType;
 
 public class Main {
     public static void main(String[] args) {
         //
-        ScreenBuilder screenBuilder = new ScreenBuilder();
-        Screen screen = screenBuilder.
-                withDarkTheme().
-                withLightTheme().
-                withButtons().
-                withHeadline().
-                build();
-
+        ScreenFactory factory = new ScreenFactory();
+        Screen screen = factory.createScreenKidsTheme(ScreenLayoutType.TYPE_B);
         //
         screen.getDetailsOfScreen();
+        screen.clickShowAnimationButton();
         //
-
     }
 }

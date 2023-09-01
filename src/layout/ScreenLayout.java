@@ -1,4 +1,4 @@
-package builder;
+package layout;
 
 public class ScreenLayout {
     private boolean headline;

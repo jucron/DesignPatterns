@@ -1,4 +1,4 @@
-package strategy;
+package theme;
 
 public class ScreenThemeDark extends ScreenThemeStrategy {
     //
@@ -7,6 +7,8 @@ public class ScreenThemeDark extends ScreenThemeStrategy {
         this.setTextColor("White");
         this.setTextFont("Calibri");
     }
-    //
-
+    @Override
+    public void clickShowAnimationButton() {
+        System.out.println("An animation with black holes exploding shows up");
+    }
 }

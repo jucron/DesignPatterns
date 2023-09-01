@@ -1,8 +1,8 @@
-import builder.ScreenLayout;
-import strategy.ScreenThemeDark;
-import strategy.ScreenThemeKids;
-import strategy.ScreenThemeLight;
-import strategy.ScreenThemeStrategy;
+import layout.ScreenLayout;
+import theme.ScreenThemeDark;
+import theme.ScreenThemeKids;
+import theme.ScreenThemeLight;
+import theme.ScreenThemeStrategy;
 
 public class ScreenBuilder {
     private Screen screen;

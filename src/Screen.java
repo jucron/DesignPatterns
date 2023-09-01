@@ -1,5 +1,5 @@
-import builder.ScreenLayout;
-import strategy.ScreenThemeStrategy;
+import layout.ScreenLayout;
+import theme.ScreenThemeStrategy;
 
 public class Screen {
     private ScreenThemeStrategy screenTheme;
@@ -14,6 +14,9 @@ public class Screen {
         System.out.println("Details of Screen Created:");
         this.screenTheme.getThemeDetails();
         this.screenLayout.getLayoutDetails();
+    }
+    public void clickShowAnimationButton () {
+        this.screenTheme.clickShowAnimationButton();
     }
 
     public ScreenThemeStrategy getScreenTheme() {

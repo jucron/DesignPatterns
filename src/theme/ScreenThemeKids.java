@@ -1,4 +1,4 @@
-package strategy;
+package theme;
 
 public class ScreenThemeKids extends ScreenThemeStrategy {
     //
@@ -6,5 +6,10 @@ public class ScreenThemeKids extends ScreenThemeStrategy {
         this.setBackgroundColor("Colorized");
         this.setTextColor("FunColor");
         this.setTextFont("ComicSans");
+    }
+
+    @Override
+    public void clickShowAnimationButton() {
+        System.out.println("An animation with many Clowns doing tricks shows up");
     }
 }
