@@ -35,23 +35,23 @@ public class ScreenBuilder {
         return this;
     }
     public ScreenBuilder withHeadline() {
-        this.screenLayout.setHeadline(true);
+        this.screenLayout.getScreenLayoutConfig().setHeadline(true);
         return this;
     }
     public ScreenBuilder withImages() {
-        this.screenLayout.setImages(true);
+        this.screenLayout.getScreenLayoutConfig().setImages(true);
         return this;
     }
     public ScreenBuilder withButtons() {
-        this.screenLayout.setButtons(true);
+        this.screenLayout.getScreenLayoutConfig().setButtons(true);
         return this;
     }
     public ScreenBuilder withMenu() {
-        this.screenLayout.setMenu(true);
+        this.screenLayout.getScreenLayoutConfig().setMenu(true);
         return this;
     }
     public ScreenBuilder withNavbar() {
-        this.screenLayout.setNavbar(true);
+        this.screenLayout.getScreenLayoutConfig().setNavbar(true);
         return this;
     }
     public Screen build() {
