@@ -1,8 +1,8 @@
 # DesignPatterns
-This project is about testing Design Patterns in a small simulation of a fucntioning App. 
+This project is about testing Design Patterns and other important Software Principles in a small mock application. 
 
 ### Theme: Homepage Screen Startup
-This app will simulate a setup of Screens of webpages. This will include setting up the screen theme, layout, colors, components and User access.
+This app simulates a Component of any bigger Application, responsible to set up the Screens (frontend) of webpages. This includes setting up the screen theme, layout, colors, components and User access.
 
 ### Usage example
 Input:
@@ -39,18 +39,27 @@ An animation with black holes exploding shows up
 3. [Singleton](#singleton)
 4. [Strategy](#strategy)
 
-## Factory
+### SOLID Principles implemented
+1. [S - Single Purpose Principle](#single-purpose-principle)
+2. [O - Open-closed Principle](#open-closed-principle)
+3. [L - Liskov Substitution Principle](#liskov-substitution-principle)
+4. [I - Interface Segregation Principle](#interface-segregation-principle)
+5. [D - Dependency Inversion Principle](#dependency-inversion-principle)
+
+
+
+## Factory DP
 ![img_2.png](img_2.png)
 
 
 
-## Builder
+## Builder DP
 ![img_3.png](img_3.png)
 
-## Singleton
+## Singleton DP
 ![img_4.png](img_4.png)
 
-## Strategy
+## Strategy DP
 Screen Theme Strategy
 
 ![img.png](img.png)
@@ -59,3 +68,19 @@ Access Type Strategy
 
 ![img_1.png](img_1.png)
 
+## SOLID Principles
+
+### Single Purpose Principle
+Content..
+
+### Open-Closed Principle
+Content..
+
+### Liskov Substitution Principle
+Content..
+
+### Interface Segregation Principle
+Content..
+
+### Dependency Inversion Principle
+Content..
