@@ -9,7 +9,7 @@ public class ScreenThemeKids extends ScreenThemeStrategy {
     }
 
     @Override
-    public void clickShowAnimationButton() {
-        System.out.println("An animation with many Clowns doing tricks shows up");
+    public String clickShowAnimationButton() {
+        return "An animation with many Clowns doing tricks shows up";
     }
 }

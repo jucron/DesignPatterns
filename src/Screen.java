@@ -12,34 +12,20 @@ public class Screen {
         this.screenLayout = screenLayout;
         this.homePage = homePage;
     }
-    public void getDetailsOfScreen() {
+
+    public ScreenThemeStrategy getScreenTheme() {
         if (this.homePage.isLoginLockOn()) {
-            this.printLoginRequiredMessage();
+            return null;
         } else {
-            this.printDetailsOfScreen();
+            return screenTheme;
         }
     }
 
-    private void printDetailsOfScreen() {
-        System.out.println("*".repeat(50));
-        System.out.println("Details of Screen called:");
-        this.screenTheme.getThemeDetails();
-        this.screenLayout.getLayoutDetails();
-    }
-
-    private void printLoginRequiredMessage() {
-        System.out.println("Access not allowed. Please login as Administrator before proceeding.");
-    }
-
-    public void clickShowAnimationButton () {
-        this.screenTheme.clickShowAnimationButton();
-    }
-
-    public ScreenThemeStrategy getScreenTheme() {
-        return screenTheme;
-    }
-
-    public void setScreenTheme(ScreenThemeStrategy screenTheme) {
-        this.screenTheme = screenTheme;
+    public ScreenLayout getScreenLayout() {
+        if (this.homePage.isLoginLockOn()) {
+            return null;
+        } else {
+            return screenLayout;
+        }
     }
 }

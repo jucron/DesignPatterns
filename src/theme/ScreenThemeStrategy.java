@@ -1,18 +1,12 @@
 package theme;
 
+
 public abstract class ScreenThemeStrategy {
     private String backgroundColor;
     private String textColor;
     private String textFont;
 
-    public void getThemeDetails() {
-        System.out.println("Theme details with the Style: "+getClass().getName()+" and settings:");
-        System.out.println(
-                "- backgroundColor:"+this.backgroundColor+
-                "\n- textColor:"+this.textColor+
-                "\n- textFont:"+this.textFont);
-    }
-    public abstract void clickShowAnimationButton();
+    public abstract String clickShowAnimationButton();
 
     public void setBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
@@ -24,5 +18,17 @@ public abstract class ScreenThemeStrategy {
 
     public void setTextFont(String textFont) {
         this.textFont = textFont;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public String getTextColor() {
+        return textColor;
+    }
+
+    public String getTextFont() {
+        return textFont;
     }
 }

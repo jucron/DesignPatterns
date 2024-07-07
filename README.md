@@ -71,7 +71,13 @@ Access Type Strategy
 ## SOLID Principles
 
 ### Single Purpose Principle
-Content..
+The code has the functionality of printing any Data of the Screen embedded in the components. That was a violation of this principle, so the refactoring migrated the Printing purpose to a special class called PrintService.
+
+Old code violation example:
+![img_6.png](img_6.png)
+
+New class PrintService with this responsibility:
+![img_5.png](img_5.png)
 
 ### Open-Closed Principle
 Content..

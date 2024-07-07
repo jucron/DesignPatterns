@@ -8,7 +8,7 @@ public class ScreenThemeLight extends ScreenThemeStrategy {
         this.setTextFont("Arial");
     }
     @Override
-    public void clickShowAnimationButton() {
-        System.out.println("An animation with many red petals falling over starts");
+    public String clickShowAnimationButton() {
+        return "An animation with many red petals falling over starts";
     }
 }

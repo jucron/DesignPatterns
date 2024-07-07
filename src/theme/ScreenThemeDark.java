@@ -8,7 +8,7 @@ public class ScreenThemeDark extends ScreenThemeStrategy {
         this.setTextFont("Calibri");
     }
     @Override
-    public void clickShowAnimationButton() {
-        System.out.println("An animation with black holes exploding shows up");
+    public String clickShowAnimationButton() {
+        return "An animation with black holes exploding shows up";
     }
 }
