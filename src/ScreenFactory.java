@@ -14,6 +14,10 @@ public class ScreenFactory {
         ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withLightTheme();
         return this.createScreen(layoutType,builderWithTheme);
     }
+    public Screen createScreenLightThemeStatic(ScreenLayoutType layoutType, HomePageType homePageType) {
+        ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withLightThemeStatic();
+        return this.createScreen(layoutType,builderWithTheme);
+    }
     public Screen createScreenKidsTheme(ScreenLayoutType layoutType, HomePageType homePageType) {
         ScreenBuilder builderWithTheme = this.createHomePage(homePageType).withKidsTheme();
         return this.createScreen(layoutType,builderWithTheme);

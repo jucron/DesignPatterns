@@ -2,10 +2,7 @@ import initialScreen.HomePageAdmin;
 import initialScreen.HomePageStrategy;
 import initialScreen.HomePageUser;
 import layout.ScreenLayout;
-import theme.ScreenThemeDark;
-import theme.ScreenThemeKids;
-import theme.ScreenThemeLight;
-import theme.ScreenThemeStrategy;
+import theme.*;
 
 public class ScreenBuilder {
     private ScreenLayout screenLayout = new ScreenLayout();
@@ -28,6 +25,10 @@ public class ScreenBuilder {
     }
     public ScreenBuilder withLightTheme() {
         this.screenTheme = new ScreenThemeLight();
+        return this;
+    }
+    public ScreenBuilder withLightThemeStatic() {
+        this.screenTheme = new ScreenThemeLightStatic();
         return this;
     }
     public ScreenBuilder withKidsTheme() {

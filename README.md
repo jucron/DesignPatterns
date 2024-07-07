@@ -7,14 +7,16 @@ This app simulates a Component of any bigger Application, responsible to set up 
 ### Usage example
 Input:
 ``` 
+//Defining layout and access type of homepage
 ScreenLayoutType layoutChosen = ScreenLayoutType.TYPE_A;
 HomePageType accessTypeChose = HomePageType.ADMIN_NOT_REQUIRED;
-//
+//Creating a Screen with theme DARK (creation is abstracted by the Factory)
 ScreenFactory factory = new ScreenFactory();
 Screen screen = factory.createScreenDarkTheme(layoutChosen, accessTypeChose);
-//
-screen.getDetailsOfScreen();
-screen.clickShowAnimationButton();
+//Printing results via the PrintService
+PrintService printService = new PrintService();
+printService.printDetailsOfScreen(screen);
+printService.printAnimation(screen);
 ```
 Output
 ``` 
@@ -30,7 +32,9 @@ Layout details with the components:
 - headline:on
 - images:off
 - navbar:off
-An animation with black holes exploding shows up
+The button for animation was clicked:
+ -> An animation with black holes exploding shows up
+
 ```
 
 ### Designs implemented (so far)
@@ -47,19 +51,17 @@ An animation with black holes exploding shows up
 5. [D - Dependency Inversion Principle](#dependency-inversion-principle)
 
 
-
-## Factory DP
+### Designs Patterns
+### Factory
 ![img_2.png](img_2.png)
 
-
-
-## Builder DP
+### Builder
 ![img_3.png](img_3.png)
 
-## Singleton DP
+### Singleton
 ![img_4.png](img_4.png)
 
-## Strategy DP
+### Strategy
 Screen Theme Strategy
 
 ![img.png](img.png)
@@ -80,10 +82,14 @@ New class PrintService with this responsibility:
 ![img_5.png](img_5.png)
 
 ### Open-Closed Principle
-Content..
+..
 
 ### Liskov Substitution Principle
-Content..
+A new subclass of ScreenThemeLight with no animation was created. The purpose was to have the same Theme but with no animations.
+![img_7.png](img_7.png)
+
+The issue is that the return statement did not follow the same signature as the superclass. That is a violation of the LSP, leaving possible bad behavior from the parent Class. This was the fix:
+![img_8.png](img_8.png)
 
 ### Interface Segregation Principle
 Content..

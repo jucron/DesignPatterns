@@ -36,7 +36,7 @@ public class PrintService {
     }
     public void printAnimation(Screen screen) {
         System.out.println("The button for animation was clicked:");
-        System.out.println(screen.getScreenTheme().clickShowAnimationButton());
+        System.out.println(" -> "+screen.getScreenTheme().clickShowAnimationButton());
     }
 }
 
