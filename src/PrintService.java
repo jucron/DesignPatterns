@@ -1,10 +1,12 @@
 import layout.ScreenLayout;
+import screen.Screen;
+import screen.ScreenProxy;
 import theme.ScreenThemeStrategy;
 
 public class PrintService {
-    public void printDetailsOfScreen(Screen screen) {
+    public void printDetailsOfScreen(ScreenProxy screen) {
         System.out.println("*".repeat(50));
-        System.out.println("Details of Screen called:");
+        System.out.println("Details of screen.Screen called:");
         //Checking if Screen details are authorized
         if (screen.getScreenTheme() == null || screen.getScreenLayout() == null) {
             this.printLoginRequiredMessage();
@@ -34,9 +36,14 @@ public class PrintService {
     private void printLoginRequiredMessage() {
         System.out.println("Access not allowed. Please login as Administrator before proceeding.");
     }
-    public void printAnimation(Screen screen) {
+    public void printAnimation(ScreenProxy screenProxy) {
+
         System.out.println("The button for animation was clicked:");
-        System.out.println(" -> "+screen.getScreenTheme().clickShowAnimationButton());
+        if (screenProxy.getScreenTheme() == null ) {
+            this.printLoginRequiredMessage();
+        } else {
+            System.out.println(" -> "+screenProxy.getScreenTheme().clickShowAnimationButton());
+        }
     }
 }
 

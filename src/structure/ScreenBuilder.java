@@ -1,7 +1,10 @@
-import initialScreen.HomePageAdmin;
-import initialScreen.HomePageStrategy;
-import initialScreen.HomePageUser;
+package structure;
+
+import homePage.HomePageAdmin;
+import homePage.HomePageStrategy;
+import homePage.HomePageUser;
 import layout.ScreenLayout;
+import screen.Screen;
 import theme.*;
 
 public class ScreenBuilder {

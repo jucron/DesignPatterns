@@ -1,8 +1,10 @@
-import initialScreen.HomePageStrategy;
+package screen;
+
+import homePage.HomePageStrategy;
 import layout.ScreenLayout;
 import theme.ScreenThemeStrategy;
 
-public class Screen {
+public class Screen implements IScreen{
     private ScreenThemeStrategy screenTheme;
     private ScreenLayout screenLayout;
     private HomePageStrategy homePage;
@@ -13,19 +15,16 @@ public class Screen {
         this.homePage = homePage;
     }
 
+    @Override
     public ScreenThemeStrategy getScreenTheme() {
-        if (this.homePage.isLoginLockOn()) {
-            return null;
-        } else {
             return screenTheme;
-        }
     }
 
+    @Override
     public ScreenLayout getScreenLayout() {
-        if (this.homePage.isLoginLockOn()) {
-            return null;
-        } else {
             return screenLayout;
-        }
+    }
+    public boolean isLoginAdminOn(){
+        return this.homePage.isLoginAdminOn();
     }
 }

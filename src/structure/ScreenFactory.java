@@ -1,5 +1,8 @@
-import initialScreen.HomePageType;
+package structure;
+
+import homePage.HomePageType;
 import layout.ScreenLayoutType;
+import screen.Screen;
 
 public class ScreenFactory {
     private final ScreenBuilder screenBuilder = new ScreenBuilder();
@@ -23,7 +26,7 @@ public class ScreenFactory {
         return this.createScreen(layoutType,builderWithTheme);
     }
     private ScreenBuilder createHomePage(HomePageType homePageType) {
-        if (homePageType == HomePageType.ADMIN_NOT_REQUIRED) {
+        if (homePageType == HomePageType.ADMIN_HOME_PAGE) {
             return screenBuilder.withHomePageAdmin();
         }
         return screenBuilder.withHomePageUser();
