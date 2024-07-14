@@ -1,0 +1,256 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "Main",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": true,
+    "cutEnum": false,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": false,
+    "hideInterfaceCalls": false, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_110327241 { 
+   	label=theme
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   ScreenThemeStrategy110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenThemeStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   backgroundColor: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   textColor: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   textFont: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ clickShowAnimationButton(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1109722326 { 
+   	label=layout
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   ScreenLayout1109722326[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenLayout</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_144518515 { 
+   	label=structure
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   ScreenBuilder144518515[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenBuilder</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   homePage: HomePageStrategy [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenLayout: ScreenLayout [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenTheme: ScreenThemeStrategy [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ build(): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withButtons(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withDarkTheme(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withHeadline(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withHomePageAdmin(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withHomePageUser(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withImages(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withKidsTheme(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withLightTheme(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withLightThemeStatic(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withMenu(): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >+ withNavbar(): ScreenBuilder</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenFactory144518515[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenFactory</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   screenBuilder: ScreenBuilder [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- createHomePage(homePageType: HomePageType): ScreenBuilder</TD></TR>
+<TR><TD ALIGN="LEFT" >- createLayoutTypeA(screenBuilder: ScreenBuilder): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >- createLayoutTypeB(screenBuilder: ScreenBuilder): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >- createLayoutTypeC(screenBuilder: ScreenBuilder): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >- createScreen(layoutType: ScreenLayoutType, builderWithTheme: ScreenBuilder): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >+ createScreenDarkTheme(layoutType: ScreenLayoutType, homePageType: HomePageType): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >+ createScreenKidsTheme(layoutType: ScreenLayoutType, homePageType: HomePageType): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >+ createScreenLightTheme(layoutType: ScreenLayoutType, homePageType: HomePageType): Screen</TD></TR>
+<TR><TD ALIGN="LEFT" >+ createScreenLightThemeStatic(layoutType: ScreenLayoutType, homePageType: HomePageType): Screen</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2006510744 { 
+   	label=PrintService
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   PrintService2006510744[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PrintService</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ printAnimation(screenProxy: ScreenProxy)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ printDetailsOfScreen(screen: ScreenProxy)</TD></TR>
+<TR><TD ALIGN="LEFT" >- printLayoutDetails(screenLayout: ScreenLayout)</TD></TR>
+<TR><TD ALIGN="LEFT" >- printLoginRequiredMessage()</TD></TR>
+<TR><TD ALIGN="LEFT" >- printThemeDetails(themeStrategy: ScreenThemeStrategy)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Main2390489[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_486325234 { 
+   	label=homePage
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   HomePageStrategy486325234[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)HomePageStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ isLoginAdminOn(): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+} 
+
+'edges    
+Main2390489 -> ScreenFactory144518515[label="main() -> createScreenDarkTheme()"];
+PrintService2006510744 -> ScreenThemeStrategy110327241[label="printAnimation() -> clickShowAnimationButton()"];
+ScreenBuilder144518515 -> HomePageStrategy486325234[label="homePage
+[0..1]"];
+ScreenBuilder144518515 -> ScreenLayout1109722326[label="screenLayout
+[0..1]"];
+ScreenBuilder144518515 -> ScreenThemeStrategy110327241[label="screenTheme
+[0..1]"];
+ScreenFactory144518515 -> ScreenBuilder144518515[label="screenBuilder
+[0..1]"];
+    
+}
+@enduml

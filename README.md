@@ -48,6 +48,7 @@ The button for animation was clicked:
 2. [Builder](#builder)
 3. [Singleton](#singleton)
 4. [Strategy](#strategy)
+5. [Proxy](#proxy)
 
 ### SOLID Principles implemented
 1. [S - Single Purpose Principle](#single-purpose-principle)
@@ -70,11 +71,14 @@ The button for animation was clicked:
 ### Strategy
 screen.Screen Theme Strategy
 
-![img.png](img.png)
+![img.png](assets/img.png)
 
 Access Type Strategy
 
 ![img_1.png](assets/img_1.png)
+
+### Proxy
+![img_1.png](assets/img_9.png)
 
 ## SOLID Principles
 

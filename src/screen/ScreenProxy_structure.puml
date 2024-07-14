@@ -1,0 +1,169 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": true,
+    "cutEnum": false,
+    "cutTests": true,
+    "cutClient": false,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": false
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": false,
+    "hideInterfaceCalls": false, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "screen.ScreenProxy",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_907689876 { 
+   	label=screen
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   IScreen907689876[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)IScreen</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getScreenLayout(): ScreenLayout</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getScreenTheme(): ScreenThemeStrategy</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+Screen907689876[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Screen</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   homePage: HomePageStrategy [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenLayout: ScreenLayout [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenTheme: ScreenThemeStrategy [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Screen(screenTheme: ScreenThemeStrategy, screenLayout: ScreenLayout, homePage: HomePageStrategy)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getScreenLayout(): ScreenLayout</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getScreenTheme(): ScreenThemeStrategy</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isLoginAdminOn(): boolean</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenProxy907689876[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenProxy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   credentials: SecurityCredentials [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screen: Screen [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ ScreenProxy(screen: Screen, credentials: SecurityCredentials)</TD></TR>
+<TR><TD ALIGN="LEFT" >- authenticate(credentials: SecurityCredentials): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getScreenLayout(): ScreenLayout</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getScreenTheme(): ScreenThemeStrategy</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SecurityCredentials907689876[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SecurityCredentials</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   password: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   username: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ SecurityCredentials(username: String, password: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPassword(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getUsername(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+IScreen907689876 -> Screen907689876[arrowhead=none, arrowtail=empty, dir=both];
+IScreen907689876 -> ScreenProxy907689876[arrowhead=none, arrowtail=empty, dir=both];
+ScreenProxy907689876 -> Screen907689876[label="screen
+[0..1]"];
+ScreenProxy907689876 -> SecurityCredentials907689876[label="credentials
+[0..1]"];
+    
+}
+@enduml

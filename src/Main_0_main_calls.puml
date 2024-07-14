@@ -1,0 +1,361 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "Main#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "Main",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": true,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_110327241 { 
+   	label=theme
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1034479614 { 
+   	label=ScreenThemeLight
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenThemeLight110327241XXXclickShowAnimationButton0[
+	label="+ clickShowAnimationButton()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenThemeLight
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1707202677 { 
+   	label=ScreenThemeStrategy
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenThemeStrategy110327241XXXclickShowAnimationButton0[
+	label="+ clickShowAnimationButton()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenThemeStrategy
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_382301563 { 
+   	label=ScreenThemeKids
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenThemeKids110327241XXXclickShowAnimationButton0[
+	label="+ clickShowAnimationButton()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenThemeKids
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_382517362 { 
+   	label=ScreenThemeDark
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenThemeDark110327241XXXclickShowAnimationButton0[
+	label="+ clickShowAnimationButton()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenThemeDark
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_144518515 { 
+   	label=structure
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1186089012 { 
+   	label=ScreenBuilder
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenBuilder144518515XXXbuild0[
+	label="+ build()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithButtons0[
+	label="+ withButtons()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithDarkTheme0[
+	label="+ withDarkTheme()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithHeadline0[
+	label="+ withHeadline()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithHomePageAdmin0[
+	label="+ withHomePageAdmin()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithHomePageUser0[
+	label="+ withHomePageUser()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithImages0[
+	label="+ withImages()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithMenu0[
+	label="+ withMenu()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+
+ScreenBuilder144518515XXXwithNavbar0[
+	label="+ withNavbar()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenBuilder
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_136738397 { 
+   	label=ScreenFactory
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ScreenFactory144518515XXXcreateScreenDarkTheme1927850796[
+	label="+ createScreenDarkTheme()"
+	style=filled
+	fillcolor=white
+	tooltip="ScreenFactory
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2006510744 { 
+   	label=PrintService
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_855372846 { 
+   	label=PrintService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PrintService2006510744XXXprintAnimation1610884418[
+	label="+ printAnimation()"
+	style=filled
+	fillcolor=white
+	tooltip="PrintService
+
+null"
+	fontcolor=darkgreen
+];
+
+PrintService2006510744XXXprintDetailsOfScreen1610884418[
+	label="+ printDetailsOfScreen()"
+	style=filled
+	fillcolor=white
+	tooltip="PrintService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1706522830 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main2390489XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Main2390489XXXmain1859653459 -> PrintService2006510744XXXprintAnimation1610884418;
+Main2390489XXXmain1859653459 -> PrintService2006510744XXXprintDetailsOfScreen1610884418;
+Main2390489XXXmain1859653459 -> ScreenFactory144518515XXXcreateScreenDarkTheme1927850796;
+PrintService2006510744XXXprintAnimation1610884418 -> ScreenThemeStrategy110327241XXXclickShowAnimationButton0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXbuild0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithButtons0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithDarkTheme0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithHeadline0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithHomePageAdmin0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithHomePageUser0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithImages0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithMenu0;
+ScreenFactory144518515XXXcreateScreenDarkTheme1927850796 -> ScreenBuilder144518515XXXwithNavbar0;
+ScreenThemeStrategy110327241XXXclickShowAnimationButton0 -> ScreenThemeDark110327241XXXclickShowAnimationButton0;
+ScreenThemeStrategy110327241XXXclickShowAnimationButton0 -> ScreenThemeKids110327241XXXclickShowAnimationButton0;
+ScreenThemeStrategy110327241XXXclickShowAnimationButton0 -> ScreenThemeLight110327241XXXclickShowAnimationButton0;
+    
+}
+@enduml
