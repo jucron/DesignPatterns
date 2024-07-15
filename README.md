@@ -49,6 +49,7 @@ The button for animation was clicked:
 3. [Singleton](#singleton)
 4. [Strategy](#strategy)
 5. [Proxy](#proxy)
+6. [Decorator](#decorator)
 
 ### SOLID Principles implemented
 1. [S - Single Purpose Principle](#single-purpose-principle)
@@ -71,14 +72,17 @@ The button for animation was clicked:
 ### Strategy
 screen.Screen Theme Strategy
 
-![img.png](assets/img.png)
+![img_5.png](assets/img.png)
 
 Access Type Strategy
 
 ![img_1.png](assets/img_1.png)
 
 ### Proxy
-![img_1.png](assets/img_9.png)
+![img_9.png](assets/img_9.png)
+
+### Decorator
+![img_10.png](assets/img_10.png)
 
 ## SOLID Principles
 
@@ -86,13 +90,17 @@ Access Type Strategy
 The code has the functionality of printing any Data of the screen.Screen embedded in the components. That was a violation of this principle, so the refactoring migrated the Printing purpose to a special class called PrintService.
 
 Old code violation example:
-![img_6.png](assets/img_6.png)
+![img_8.png](assets/img_6.png)
 
 New class PrintService with this responsibility:
-![img_5.png](assets/img_5.png)
+![img_9.png](assets/img_5.png)
 
 ### Open-Closed Principle
-..
+The idea is to create new functionality without changing the original object. With that in mind, the Class ScreenLayout was requested a new feature of resizing the layout in case was necessary.
+![img_10.png](assets/img10.png)
+
+Instead of changing the ScreenLayout Class, the solution was to create a Decorator structure allowing a new subclass Class. This class is then responsible for adding this new functionality.
+![img_11.png](assets/img_11.png)
 
 ### Liskov Substitution Principle
 A new subclass of ScreenThemeLight with no animation was created. The purpose was to have the same Theme but with no animations.

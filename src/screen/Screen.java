@@ -1,6 +1,7 @@
 package screen;
 
 import homePage.HomePageStrategy;
+import layout.ResizableScreenLayout;
 import layout.ScreenLayout;
 import theme.ScreenThemeStrategy;
 
@@ -26,5 +27,11 @@ public class Screen implements IScreen{
     }
     public boolean isLoginAdminOn(){
         return this.homePage.isLoginAdminOn();
+    }
+    public String resizeScreen (int width, int height) {
+        if (this.getScreenLayout() instanceof ResizableScreenLayout) {
+            return ((ResizableScreenLayout) this.getScreenLayout()).resizeLayout(width,height);
+        }
+        return null;
     }
 }
