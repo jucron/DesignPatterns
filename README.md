@@ -113,4 +113,12 @@ The issue is that the return statement did not follow the same signature as the 
 Content..
 
 ### Dependency Inversion Principle
-Content..
+The Screen Class, considered as a Client Class, had dependency of 3 other concrete Classes:
+- ScreenThemeStrategy
+- ScreenLayout
+- HomePageStrategy
+
+This violates DIP and reflects as a tightly coupled relationship. 
+To fix this, all 3 Service Classes were changed to Interfaces, inverting the dependency and decoupling the Classes.
+
+![img_12.png](assets/img_12.png)

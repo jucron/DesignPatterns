@@ -3,6 +3,8 @@ package screen;
 import homePage.HomePageStrategy;
 import layout.ResizableScreenLayout;
 import layout.ScreenLayout;
+import layout.ScreenLayoutBase;
+import theme.BaseScreenTheme;
 import theme.ScreenThemeStrategy;
 
 public class Screen implements IScreen{
@@ -10,7 +12,7 @@ public class Screen implements IScreen{
     private ScreenLayout screenLayout;
     private HomePageStrategy homePage;
 
-    public Screen(ScreenThemeStrategy screenTheme, ScreenLayout screenLayout, HomePageStrategy homePage) {
+    public Screen(BaseScreenTheme screenTheme, ScreenLayoutBase screenLayout, HomePageStrategy homePage) {
         this.screenTheme = screenTheme;
         this.screenLayout = screenLayout;
         this.homePage = homePage;

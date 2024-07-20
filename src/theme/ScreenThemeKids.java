@@ -1,6 +1,6 @@
 package theme;
 
-public class ScreenThemeKids extends ScreenThemeStrategy {
+public class ScreenThemeKids extends BaseScreenTheme {
     //
     public ScreenThemeKids() {
         this.setBackgroundColor("Colorized");

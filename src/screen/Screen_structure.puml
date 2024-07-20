@@ -1,0 +1,261 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "IScreen;ScreenProxy",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "clickShowAnimationButton",
+    "methodNameIncludeFilter": "resizeScreen",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": false, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "screen.Screen",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_110327241 { 
+   	label=theme
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   BaseScreenTheme110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BaseScreenTheme</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   backgroundColor: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   textColor: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   textFont: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenThemeDark110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenThemeDark</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenThemeKids110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenThemeKids</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenThemeLight110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenThemeLight</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenThemeStrategy110327241[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ScreenThemeStrategy</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+} 
+
+subgraph cluster_1109722326 { 
+   	label=layout
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   ResizableScreenLayout1109722326[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ResizableScreenLayout</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ScreenLayout1109722326[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ScreenLayout</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+ScreenLayoutBase1109722326[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ScreenLayoutBase</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_486325234 { 
+   	label=homePage
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   HomePageAdmin486325234[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)HomePageAdmin</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+HomePageStrategy486325234[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)HomePageStrategy</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+HomePageUser486325234[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)HomePageUser</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_907689876 { 
+   	label=screen
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Screen907689876[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Screen</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   homePage: HomePageStrategy [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenLayout: ScreenLayout [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   screenTheme: ScreenThemeStrategy [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ resizeScreen(width: int, height: int): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+BaseScreenTheme110327241 -> ScreenThemeDark110327241[arrowhead=none, arrowtail=empty, dir=both];
+BaseScreenTheme110327241 -> ScreenThemeKids110327241[arrowhead=none, arrowtail=empty, dir=both];
+BaseScreenTheme110327241 -> ScreenThemeLight110327241[arrowhead=none, arrowtail=empty, dir=both];
+HomePageStrategy486325234 -> HomePageAdmin486325234[arrowhead=none, arrowtail=empty, dir=both];
+HomePageStrategy486325234 -> HomePageUser486325234[arrowhead=none, arrowtail=empty, dir=both];
+Screen907689876 -> HomePageStrategy486325234[label="homePage
+[0..1]"];
+Screen907689876 -> ScreenLayout1109722326[label="screenLayout
+[0..1]"];
+Screen907689876 -> ScreenThemeStrategy110327241[label="screenTheme
+[0..1]"];
+ScreenLayout1109722326 -> ScreenLayoutBase1109722326[arrowhead=none, arrowtail=empty, dir=both];
+ScreenLayoutBase1109722326 -> ResizableScreenLayout1109722326[arrowhead=none, arrowtail=empty, dir=both];
+ScreenThemeStrategy110327241 -> BaseScreenTheme110327241[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml

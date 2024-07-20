@@ -1,6 +1,6 @@
 package theme;
 
-public class ScreenThemeDark extends ScreenThemeStrategy {
+public class ScreenThemeDark extends BaseScreenTheme {
     //
     public ScreenThemeDark() {
         this.setBackgroundColor("Black");

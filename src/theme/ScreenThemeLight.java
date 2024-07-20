@@ -1,6 +1,6 @@
 package theme;
 
-public class ScreenThemeLight extends ScreenThemeStrategy {
+public class ScreenThemeLight extends BaseScreenTheme {
 
     public ScreenThemeLight() {
         this.setBackgroundColor("White");

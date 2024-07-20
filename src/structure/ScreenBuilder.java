@@ -3,13 +3,13 @@ package structure;
 import homePage.HomePageAdmin;
 import homePage.HomePageStrategy;
 import homePage.HomePageUser;
-import layout.ScreenLayout;
+import layout.ScreenLayoutBase;
 import screen.Screen;
 import theme.*;
 
 public class ScreenBuilder {
-    private ScreenLayout screenLayout = new ScreenLayout();
-    private ScreenThemeStrategy screenTheme;
+    private ScreenLayoutBase screenLayout = new ScreenLayoutBase();
+    private BaseScreenTheme screenTheme;
     private HomePageStrategy homePage;
 
     public ScreenBuilder() {

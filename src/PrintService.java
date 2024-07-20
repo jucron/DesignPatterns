@@ -1,5 +1,4 @@
 import layout.ScreenLayout;
-import screen.Screen;
 import screen.ScreenProxy;
 import theme.ScreenThemeStrategy;
 
