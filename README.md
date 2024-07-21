@@ -110,7 +110,11 @@ The issue is that the return statement did not follow the same signature as the 
 ![img_8.png](assets/img_8.png)
 
 ### Interface Segregation Principle
-Content..
+This principle was validated when the Decorator pattern was implemented in ScreenLayout Class, to add new "resizable" functionality. 
+It means that ScreenLayoutBase is free of the method resizeLayout() which is not relevant for itself.
+This specialized method is only inherited from Interface ResizableLayout, which should only have subclasses that finds this method relevant.
+
+![img.png](img.png)
 
 ### Dependency Inversion Principle
 The Screen Class, considered as a Client Class, had dependency of 3 other concrete Classes:

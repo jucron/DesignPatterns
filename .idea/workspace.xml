@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0a2e96-71db-4c39-b24f-fa72f83d4376" name="Changes" comment="implements Dependency Inversion Principle">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/ScreenLayoutBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screen/Screen_structure.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme/BaseScreenTheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrintService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/ResizableScreenLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/ResizableScreenLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/ScreenLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/ScreenLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screen/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structure/ScreenBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structure/ScreenBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/ScreenThemeDark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/ScreenThemeDark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/ScreenThemeKids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/ScreenThemeKids.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/ScreenThemeLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/ScreenThemeLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/ScreenThemeStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/ScreenThemeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/ResizableLayout_structure.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +117,8 @@
       <workItem from="1720960862020" duration="2494000" />
       <workItem from="1720982667385" duration="1354000" />
       <workItem from="1721069286815" duration="2123000" />
-      <workItem from="1721483541179" duration="4395000" />
+      <workItem from="1721483541179" duration="5252000" />
+      <workItem from="1721561290625" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="updates README.md">
       <option name="closed" value="true" />
@@ -180,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721071380830</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implements Dependency Inversion Principle">
+      <option name="closed" value="true" />
+      <created>1721488370831</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721488370832</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
