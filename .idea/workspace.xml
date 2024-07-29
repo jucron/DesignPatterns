@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0a2e96-71db-4c39-b24f-fa72f83d4376" name="Changes" comment="implements Dependency Inversion Principle">
-      <change afterPath="$PROJECT_DIR$/src/layout/ResizableLayout_structure.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/ResizableLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/ResizableLayoutDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/ResizableLayout_structure.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/ResizableScreenLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/ResizableScreenLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/ResizableScreenLayout_structure.puml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ivQmBiWosgBXif9Ffw0v8Gylbr" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -62,7 +65,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2735632&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -79,7 +82,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DesignPatterns" />
@@ -96,7 +99,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-f644763e9732-4a89cc43" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -119,6 +123,10 @@
       <workItem from="1721069286815" duration="2123000" />
       <workItem from="1721483541179" duration="5252000" />
       <workItem from="1721561290625" duration="483000" />
+      <workItem from="1722242999662" duration="32000" />
+      <workItem from="1722243055552" duration="2157000" />
+      <workItem from="1722246584579" duration="1701000" />
+      <workItem from="1722255932562" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="updates README.md">
       <option name="closed" value="true" />
@@ -203,5 +211,9 @@
     <MESSAGE value="implements Decorator and Open-Closed Principle" />
     <MESSAGE value="implements Dependency Inversion Principle" />
     <option name="LAST_COMMIT_MESSAGE" value="implements Dependency Inversion Principle" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

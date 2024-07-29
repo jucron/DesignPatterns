@@ -97,7 +97,7 @@ New class PrintService with this responsibility:
 
 ### Open-Closed Principle
 The idea is to create new functionality without changing the original object. With that in mind, the Class ScreenLayout was requested a new feature of resizing the layout in case was necessary.
-![img_10.png](assets/img10.png)
+![img_13.png](assets/img_13.png)
 
 Instead of changing the ScreenLayout Class, the solution was to create a Decorator structure allowing a new subclass Class. This class is then responsible for adding this new functionality.
 ![img_11.png](assets/img_11.png)
